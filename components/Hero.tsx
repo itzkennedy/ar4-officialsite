@@ -34,7 +34,7 @@ export function Hero() {
         <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#08080a]/70 to-transparent" />
       </div>
 
-      <div className="relative z-10 mx-auto flex h-full max-w-[1480px] flex-col justify-end px-5 pb-24 sm:px-8 md:pb-32">
+      <div className="relative z-10 mx-auto flex h-full max-w-[1480px] flex-col justify-end px-5 pb-40 sm:px-8 md:pb-48">
         <motion.p
           initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
