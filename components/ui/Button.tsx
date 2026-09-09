@@ -1,13 +1,13 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
 
 type Variant = "primary" | "accent" | "ghost";
 type Size = "sm" | "md" | "lg";
 
 const variantClasses: Record<Variant, string> = {
-  primary: "bg-[#F2F0EB] text-[#080808] hover:bg-[#D65A31] hover:text-[#F2F0EB]",
-  accent: "bg-[#D65A31] text-[#F2F0EB] hover:bg-[#F2F0EB] hover:text-[#080808]",
-  ghost: "bg-transparent text-[#F2F0EB] hover:text-[#D65A31]",
+  primary: "bg-[#F2F0EB] text-[#080808] hover:bg-[#a8342a] hover:text-[#F2F0EB]",
+  accent: "bg-[#a8342a] text-[#F2F0EB] hover:bg-[#F2F0EB] hover:text-[#080808]",
+  ghost: "bg-transparent text-[#F2F0EB] hover:text-[#a8342a]",
 };
 
 const sizeClasses: Record<Size, string> = {

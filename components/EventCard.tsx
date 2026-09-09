@@ -25,10 +25,10 @@ export function EventRow({ event }: { event: LiveEvent }) {
 
   return (
     <div
-      className="group grid grid-cols-1 items-end gap-6 border-t border-[#1a1a1a] py-8 transition-colors duration-300 hover:border-[#D65A31] sm:grid-cols-12 sm:gap-4 lg:py-10"
+      className="group grid grid-cols-1 items-end gap-6 border-t border-[#1a1a1a] py-8 transition-colors duration-300 hover:border-[#a8342a] sm:grid-cols-12 sm:gap-4 lg:py-10"
     >
       <div className="flex items-center gap-6 sm:col-span-3">
-        <p className="font-display text-5xl font-normal leading-none text-[#D65A31] tabular-nums sm:text-6xl">
+        <p className="font-display text-5xl font-normal leading-none text-[#a8342a] tabular-nums sm:text-6xl">
           {formatEventDay(event.date)}
         </p>
         <p className="font-display text-2xl font-normal uppercase leading-none text-[#F2F0EB]">
@@ -62,7 +62,7 @@ export function EventRow({ event }: { event: LiveEvent }) {
             href={event.ticketUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-[#F2F0EB] px-7 py-3 font-mono text-[0.65rem] uppercase tracking-[0.25em] text-[#080808] transition-colors duration-300 hover:bg-[#D65A31] hover:text-[#F2F0EB]"
+            className="inline-flex items-center gap-3 bg-[#F2F0EB] px-7 py-3 font-mono text-[0.65rem] uppercase tracking-[0.25em] text-[#080808] transition-colors duration-300 hover:bg-[#a8342a] hover:text-[#F2F0EB]"
           >
             Get Tickets
             <span aria-hidden="true" className="text-base leading-none">→</span>

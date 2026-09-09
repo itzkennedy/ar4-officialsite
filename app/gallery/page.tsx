@@ -25,8 +25,8 @@ function GalleryGrid({ onOpen }: { onOpen: (image: GalleryImage) => void }) {
             <Image
               src={image.src}
               alt={image.alt}
-              width={800}
-              height={image.span === "tall" ? 1000 : 800}
+              width={1400}
+              height={image.span === "tall" ? 1750 : image.span === "wide" ? 1050 : 1400}
               sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
               className={`h-auto w-full object-cover ${image.span === "tall" ? "aspect-[4/5]" : "aspect-square"} transition-transform duration-700 ease-out group-hover:scale-[1.04]`}
             />
@@ -47,6 +47,7 @@ export default function GalleryPage() {
   const [active, setActive] = useState<GalleryImage | null>(null);
   const reduceMotion = useReducedMotion();
   const closeRef = useRef<HTMLButtonElement>(null);
+  const touchStartX = useRef<number | null>(null);
 
   const close = () => setActive(null);
   const navigate = useCallback((dir: 1 | -1) => {
@@ -91,7 +92,7 @@ export default function GalleryPage() {
         <PageHeader
           eyebrow="Archive"
           title="Gallery."
-          description="Portraits, artwork and the visual universe of Reeplay and Anti World Gangstars."
+          description="Portraits and fragments from the visual archive of AR4."
         />
 
         <section className="bg-[#080808]">
@@ -124,7 +125,7 @@ export default function GalleryPage() {
                 type="button"
                 ref={closeRef}
                 onClick={close}
-                className="p-2 text-[#F2F0EB] transition-colors hover:text-[#D65A31]"
+                className="p-2 text-[#F2F0EB] transition-colors hover:text-[#a8342a]"
                 aria-label="Close"
               >
                 <CloseIcon className="h-7 w-7" />
@@ -134,6 +135,17 @@ export default function GalleryPage() {
             <div
               className="relative flex flex-1 items-center justify-center px-4"
               onClick={(e) => e.stopPropagation()}
+              onTouchStart={(e) => {
+                touchStartX.current = e.touches[0]?.clientX ?? null;
+              }}
+              onTouchEnd={(e) => {
+                if (touchStartX.current === null) return;
+                const endX = e.changedTouches[0]?.clientX;
+                if (endX === undefined) return;
+                const delta = endX - touchStartX.current;
+                touchStartX.current = null;
+                if (Math.abs(delta) > 48) navigate(delta > 0 ? -1 : 1);
+              }}
             >
               <button
                 type="button"

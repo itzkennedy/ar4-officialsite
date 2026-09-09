@@ -46,7 +46,7 @@ export function ArrowIcon(props: IconProps) {
 export function ArrowUpIcon(props: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true" {...props}>
-      <path d="M12 4v16m0 0 6-6m-6 6-6-6" strokeLinecap="square" strokeLinejoin="miter" />
+      <path d="M12 20V4m0 0-6 6m6-6 6 6" strokeLinecap="square" strokeLinejoin="miter" />
     </svg>
   );
 }

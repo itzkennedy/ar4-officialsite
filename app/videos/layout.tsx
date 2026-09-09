@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Videos",
+  title: "Film",
   description:
-    "Official videos from Reeplay: music videos, collabs, freestyles and behind the scenes from the channel.",
+    "The films of AR4: official music videos, visualisers and lyric videos, streaming on YouTube under the channel AR4.",
 };
 
 export default async function VideosLayout({

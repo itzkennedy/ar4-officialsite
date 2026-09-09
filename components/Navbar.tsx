@@ -9,6 +9,14 @@ import { SocialLinks } from "@/components/SocialLinks";
 import { ButtonLink } from "@/components/ui/Button";
 import { CloseIcon, MenuIcon } from "@/components/icons";
 
+function Brand({ className = "" }: { className?: string }) {
+  return (
+    <span className={`font-display text-2xl font-normal uppercase text-[#F2F0EA] ${className}`}>
+      AR<span className="text-[#a8342a]">4</span>
+    </span>
+  );
+}
+
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,21 +52,23 @@ export function Navbar() {
 
   const closeMenu = () => setMenuOpen(false);
 
+  const primaryStream = siteConfig.streaming.find((s) => s.primary);
+
   return (
     <>
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
-          scrolled ? "bg-[#080808]/90 backdrop-blur-md" : "bg-transparent"
+          scrolled ? "bg-[#08080a]/90 backdrop-blur-md" : "bg-transparent"
         }`}
       >
         <div className="mx-auto flex h-16 max-w-[1480px] items-center justify-between px-5 sm:px-8 md:h-20">
           <Link
             href="/"
-            className="group relative z-10 font-display text-xl font-normal uppercase text-[#F2F0EB]"
-            aria-label="REEPLAY Home"
+            className="group relative z-10 text-[#F2F0EA]"
+            aria-label="AR4 Home"
           >
-            REE<span className="text-[#D65A31]">PLAY</span>
-            <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#D65A31] transition-all duration-300 group-hover:w-full" />
+            <Brand />
+            <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#a8342a] transition-all duration-300 group-hover:w-full" />
           </Link>
 
           <nav className="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
@@ -69,12 +79,12 @@ export function Navbar() {
                   key={item.href}
                   href={item.href}
                   className={`relative text-xs font-semibold tracking-[0.08em] transition-colors duration-300 ${
-                    active ? "text-[#F2F0EB]" : "text-[#9b9b93] hover:text-[#F2F0EB]"
+                    active ? "text-[#F2F0EA]" : "text-[#9b9b93] hover:text-[#F2F0EA]"
                   }`}
                 >
                   {item.label}
                   <span
-                    className={`absolute -bottom-2 left-0 h-px bg-[#D65A31] transition-all duration-300 ${
+                    className={`absolute -bottom-2 left-0 h-px bg-[#a8342a] transition-all duration-300 ${
                       active ? "w-full" : "w-0"
                     }`}
                   />
@@ -89,7 +99,7 @@ export function Navbar() {
               iconClassName="h-[18px] w-[18px]"
             />
             <ButtonLink
-              href={siteConfig.streaming[0].url}
+              href={primaryStream?.url ?? siteConfig.streaming[0].url}
               target="_blank"
               rel="noopener noreferrer"
               variant="primary"
@@ -102,7 +112,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setMenuOpen(true)}
-            className="z-10 -mr-2 p-2 text-[#F2F0EB] lg:hidden"
+            className="z-10 -mr-2 p-2 text-[#F2F0EA] lg:hidden"
             aria-label="Open menu"
             aria-expanded={menuOpen}
           >
@@ -114,7 +124,7 @@ export function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className="fixed inset-0 z-[60] flex flex-col bg-[#080808] lg:hidden"
+            className="fixed inset-0 z-[60] flex flex-col bg-[#08080a] lg:hidden"
             initial={reduceMotion ? { opacity: 0 } : { opacity: 0, y: -32 }}
             animate={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
             exit={reduceMotion ? { opacity: 0 } : { opacity: 0, y: -32 }}
@@ -125,13 +135,18 @@ export function Navbar() {
           >
             <div className="grain flex min-h-full flex-col">
               <div className="flex h-16 items-center justify-between px-5 sm:px-8">
-                <span className="font-display text-xl font-normal uppercase">
-                  REE<span className="text-[#D65A31]">PLAY</span>
-                </span>
+                <Link
+                  href="/"
+                  onClick={closeMenu}
+                  className="text-[#F2F0EA]"
+                  aria-label="AR4 Home"
+                >
+                  <Brand />
+                </Link>
                 <button
                   type="button"
                   onClick={() => setMenuOpen(false)}
-                  className="-mr-2 p-2 text-[#F2F0EB]"
+                  className="-mr-2 p-2 text-[#F2F0EA]"
                   aria-label="Close menu"
                 >
                   <CloseIcon className="h-7 w-7" />
@@ -155,7 +170,7 @@ export function Navbar() {
                         href={item.href}
                         onClick={closeMenu}
                         className={`group flex items-baseline justify-between py-3 font-display text-2xl font-normal uppercase transition-colors duration-300 sm:py-4 sm:text-3xl ${
-                          active ? "text-[#D65A31]" : "text-[#F2F0EB] hover:text-[#D65A31]"
+                          active ? "text-[#a8342a]" : "text-[#F2F0EA] hover:text-[#a8342a]"
                         }`}
                       >
                         <span className="flex items-baseline gap-4">
@@ -166,7 +181,7 @@ export function Navbar() {
                         </span>
                         <span
                           aria-hidden="true"
-                          className="text-[#55554e] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#D65A31]"
+                          className="text-[#55554e] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#a8342a]"
                         >
                           →
                         </span>
@@ -183,7 +198,7 @@ export function Navbar() {
                 className="px-6 pb-10 pt-6 sm:px-12"
               >
                 <ButtonLink
-                  href={siteConfig.streaming[0].url}
+                  href={primaryStream?.url ?? siteConfig.streaming[0].url}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={closeMenu}
@@ -200,7 +215,7 @@ export function Navbar() {
                     iconClassName="h-6 w-6"
                   />
                   <span className="ml-auto font-mono text-[0.55rem] uppercase tracking-[0.2em] text-[#55554e]">
-                    @reeplaysumtin
+                    @ar4oluwa
                   </span>
                 </div>
               </motion.div>

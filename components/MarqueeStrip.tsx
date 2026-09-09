@@ -1,5 +1,5 @@
 ﻿export function MarqueeStrip({
-  phrases = ["REE PLAY", "ANTI WORLD", "GANG BUSINESS", "NEW MUSIC", "HIP HOP", "STORYTELLING"],
+  phrases = ["AR4", "IT'S NOT DAT DEEP", "one man soldier", "NEW MUSIC", "NEED YA", "PAY NO MIND"],
 }: {
   phrases?: string[];
 }) {
@@ -9,7 +9,7 @@
       className="flex items-center font-display text-3xl font-normal uppercase text-[#1f1f1f]"
     >
       {text}
-      <span className="mx-8 text-[#D65A31]">✦</span>
+      <span className="mx-8 text-[#a8342a]">✦</span>
     </span>
   );
 

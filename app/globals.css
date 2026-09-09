@@ -1,16 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #080808;
-  --color-coal: #111111;
-  --color-carbon: #1a1a1a;
-  --color-bone: #f2f0eb;
-  --color-ash: #8a8a8a;
-  --color-smoke: #6b6b64;
-  --color-stone: #242424;
-  --color-ember: #d65a31;
-  --color-blood: #8f1f1b;
-  --color-jade: #2f6b4f;
+  --color-ink: #08080a;
+  --color-coal: #0f0f11;
+  --color-carbon: #16161a;
+  --color-iron: #202024;
+  --color-line: #26262c;
+  --color-bone: #f2f0ea;
+  --color-paper: #d8d4ca;
+  --color-ash: #8f8b82;
+  --color-smoke: #6b6861;
+  --color-mist: #3a3a40;
+  --color-blood: #a8342a;
+  --color-rust: #6e2a22;
 
   --font-display: var(--font-display-family), Impact, ui-sans-serif, sans-serif;
   --font-body: var(--font-body-family), ui-sans-serif, system-ui, sans-serif;
@@ -31,6 +33,7 @@
   color-scheme: dark;
   --bg: var(--color-ink);
   --fg: var(--color-bone);
+  --accent: var(--color-blood);
 }
 
 html {
@@ -38,8 +41,8 @@ html {
 }
 
 body {
-  background-color: #080808;
-  color: #f2f0eb;
+  background-color: #08080a;
+  color: #f2f0ea;
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -50,6 +53,7 @@ body {
 .font-display {
   font-kerning: normal;
   text-transform: uppercase;
+  letter-spacing: 0.01em;
 }
 
 a:focus-visible,
@@ -59,13 +63,13 @@ select:focus-visible,
 textarea:focus-visible,
 summary:focus-visible,
 [tabindex]:focus-visible {
-  outline: 1px solid #D65A31;
+  outline: 1px solid #a8342a;
   outline-offset: 3px;
 }
 
 ::selection {
-  background-color: #D65A31;
-  color: #080808;
+  background-color: #a8342a;
+  color: #08080a;
 }
 
 /* Custom scrollbar */
@@ -73,14 +77,14 @@ summary:focus-visible,
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #080808;
+  background: #08080a;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2a2a2a;
+  background: #2a2a30;
   border-radius: 0;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #D65A31;
+  background: #a8342a;
 }
 
 /* Utility classes */
@@ -97,7 +101,7 @@ summary:focus-visible,
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.06;
+  opacity: 0.05;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
@@ -107,7 +111,7 @@ summary:focus-visible,
   100% { transform: translateX(-50%); }
 }
 .animate-marquee {
-  animation: marquee 32s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 
 /* Hero initial load */
@@ -126,6 +130,15 @@ summary:focus-visible,
 }
 .anim-fade-in {
   animation: fade-in 1s ease both;
+}
+
+/* Slow, deliberate cinematic scale */
+@keyframes slow-zoom {
+  from { transform: scale(1.08); }
+  to { transform: scale(1); }
+}
+.anim-slow-zoom {
+  animation: slow-zoom 3s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 /* Line clamp */
@@ -156,7 +169,8 @@ summary:focus-visible,
   html {
     scroll-behavior: auto;
   }
-  .animate-marquee {
+  .animate-marquee,
+  .anim-slow-zoom {
     animation: none;
   }
   .anim-fade-up,

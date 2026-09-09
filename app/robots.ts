@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://reeplay.ng/sitemap.xml",
+    sitemap: "https://ar4.ng/sitemap.xml",
   };
 }

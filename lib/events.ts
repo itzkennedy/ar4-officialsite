@@ -59,5 +59,5 @@ export const emptyStateCopy = {
   heading: "No Upcoming Shows",
   subheading: "Check back soon.",
   body:
-    "There are no verified live dates announced right now. New shows, festivals and appearances will appear here as soon as they are confirmed.",
+    "There are no confirmed live dates announced right now. New shows, festivals and appearances will appear here the moment they are confirmed.",
 } as const;

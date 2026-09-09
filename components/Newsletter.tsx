@@ -26,14 +26,14 @@ export function Newsletter() {
         <Reveal>
           <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="font-serif text-xl italic text-[#D65A31]">
+              <p className="font-serif text-xl italic text-[#a8342a]">
                 Be the First to Know
               </p>
               <h2 className="mt-5 max-w-[16ch] font-display text-4xl font-normal uppercase leading-[0.9] text-[#F2F0EB] sm:text-6xl">
                 New shows, first
               </h2>
               <p className="mt-5 max-w-[40ch] text-sm leading-relaxed text-[#8a8a8a]">
-                Get notified when Reeplay announces new shows. Plus new music and videos.
+                First to hear when AR4 announces new music, films and shows.
               </p>
             </div>
 
@@ -62,7 +62,7 @@ export function Newsletter() {
                         if (status === "error") setStatus("idle");
                       }}
                       placeholder="Your email"
-                      className="w-full border border-[#2a2a2a] bg-[#111] px-5 py-4 text-sm text-[#F2F0EB] placeholder:text-[#55554e] focus:border-[#D65A31] focus:outline-none"
+                      className="w-full border border-[#2a2a2a] bg-[#111] px-5 py-4 text-sm text-[#F2F0EB] placeholder:text-[#55554e] focus:border-[#a8342a] focus:outline-none"
                     />
                     <Button type="submit" variant="primary" size="lg" className="w-full sm:w-auto">
                       Subscribe
@@ -70,7 +70,7 @@ export function Newsletter() {
                     </Button>
                   </div>
                   {status === "error" ? (
-                    <p className="mt-3 font-mono text-[0.62rem] uppercase tracking-[0.2em] text-[#D65A31]">
+                    <p className="mt-3 font-mono text-[0.62rem] uppercase tracking-[0.2em] text-[#a8342a]">
                       Enter a valid email address.
                     </p>
                   ) : (

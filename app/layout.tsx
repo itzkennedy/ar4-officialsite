@@ -36,49 +36,48 @@ const dmMono = DM_Mono({
   display: "swap",
 });
 
-const metadataBase = new URL("https://reeplay.ng");
+const metadataBase = new URL("https://ar4.ng");
 
 export const metadata: Metadata = {
   metadataBase,
   title: {
-    default: "REEPLAY: Official Website",
-    template: "%s | REEPLAY",
+    default: "AR4 | Araoluwa Giwa-Osagie",
+    template: "%s | AR4",
   },
   description:
-    "Official website of Nigerian rapper and songwriter Reeplay. Explore music, videos, live shows and the world of Raw Evolved Energy Playing Loud All Year.",
+    "Official website of Nigerian songstress AR4 (Araoluwa Giwa-Osagie). Music, film and the world behind IT'S NOT DAT DEEP. one man soldier.",
   keywords: [
-    "Reeplay",
-    "Nigerian rapper",
-    "Anti World Gangstars",
-    "Nigerian hip hop",
-    "Raw Evolved Energy",
-    "REEPLAY",
+    "AR4",
+    "Araoluwa Giwa-Osagie",
+    "Nigerian songstress",
+    "IT'S NOT DAT DEEP",
+    "denzl",
+    "Nigerian music",
+    "ar4oluwa",
   ],
   openGraph: {
-    title: "REEPLAY: Official Website",
+    title: "AR4 | Araoluwa Giwa-Osagie",
     description:
-      "Raw Evolved Energy Playing Loud All Year. Official website of Nigerian rapper and songwriter Reeplay.",
-    url: "https://reeplay.ng",
-    siteName: "REEPLAY",
+      "one man soldier. The official digital home of Nigerian songstress AR4 and the world of IT'S NOT DAT DEEP.",
+    url: "https://ar4.ng",
+    siteName: "AR4",
     type: "website",
     locale: "en_NG",
     images: [
       {
-        url: "https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/31/ab/02/31ab0292-7d02-f62f-1ace-d2a85f1c0373/file_cropped.png/1400x1400bb.png",
-        width: 1400,
-        height: 1400,
-        alt: "Reeplay",
+        url: "/images/ar4/hate-me.jpg",
+        width: 1440,
+        height: 1919,
+        alt: "AR4",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "REEPLAY: Official Website",
+    title: "AR4 | Araoluwa Giwa-Osagie",
     description:
-      "Raw Evolved Energy Playing Loud All Year. The official digital world of Nigerian rapper Reeplay.",
-    images: [
-      "https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/31/ab/02/31ab0292-7d02-f62f-1ace-d2a85f1c0373/file_cropped.png/1400x1400bb.png",
-    ],
+      "one man soldier. The official digital home of Nigerian songstress AR4 and the world of IT'S NOT DAT DEEP.",
+    images: ["/images/ar4/hate-me.jpg"],
   },
   robots: {
     index: true,
@@ -87,7 +86,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#080808",
+  themeColor: "#08080a",
   width: "device-width",
   initialScale: 1,
 };
@@ -102,27 +101,23 @@ export default function RootLayout({
       lang="en"
       className={`${bebasNeue.variable} ${manrope.variable} ${instrumentSerif.variable} ${dmMono.variable}`}
     >
-      <body className="min-h-screen bg-[#080808] text-[#F2F0EB] antialiased">
+      <body className="min-h-screen bg-[#08080a] text-[#F2F0EA] antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "MusicGroup",
-              name: "Reeplay",
-              alternateName: "REEPLAY",
+              name: "AR4",
+              alternateName: "Araoluwa Giwa-Osagie",
               description:
-                "Nigerian rapper and songwriter. Member of the Anti World Gangstars collective.",
-              url: "https://reeplay.ng",
-              genre: ["Nigerian Hip Hop", "Rap"],
+                "Nigerian songstress and songwriter. Araoluwa Giwa-Osagie, known as AR4.",
+              url: "https://ar4.ng",
+              genre: ["Soul", "Afrobeats", "Alternative"],
               nationalLocation: { "@type": "Country", name: "Nigeria" },
               sameAs: [
-                "https://www.instagram.com/reeplaysumtin/",
-                "https://x.com/reeplaysumtin",
-                "https://www.facebook.com/reeplaysumtin/",
-                "https://www.youtube.com/channel/UCp7Ibj9RmtEn-mk0kVrUOvw",
-                "https://soundcloud.com/reeplaysumtin",
-                "https://open.spotify.com/artist/2UausQcu26M23zEr5rUODB",
+                "https://www.instagram.com/ar4oluwa/",
+                "https://audiomack.com/ar4oluwa",
               ],
             }),
           }}

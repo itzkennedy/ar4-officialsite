@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
@@ -35,7 +35,7 @@ export function ScrollToTop() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 16 }}
           transition={{ duration: reduceMotion ? 0 : 0.35, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed bottom-5 right-5 z-50 flex h-11 w-11 items-center justify-center bg-[#111] text-[#F2F0EB] shadow-lg shadow-[#080808]/60 transition-colors duration-300 hover:bg-[#D65A31] hover:text-[#F2F0EB] sm:bottom-7 sm:right-7"
+          className="fixed bottom-5 right-5 z-50 flex h-11 w-11 items-center justify-center bg-[#111] text-[#F2F0EB] shadow-lg shadow-[#080808]/60 transition-colors duration-300 hover:bg-[#a8342a] hover:text-[#F2F0EB] sm:bottom-7 sm:right-7"
           aria-label="Back to top"
         >
           <ArrowUpIcon className="h-5 w-5" />

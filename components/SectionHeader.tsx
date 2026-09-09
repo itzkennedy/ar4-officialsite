@@ -1,4 +1,4 @@
-import { Reveal } from "@/components/animations";
+﻿import { Reveal } from "@/components/animations";
 import type { ReactNode } from "react";
 
 interface SectionHeaderProps {
@@ -25,7 +25,7 @@ export function SectionHeader({
         className={layout === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}
       >
         {eyebrow ? (
-          <p className="font-serif text-xl italic leading-snug text-[#D65A31]">
+          <p className="font-serif text-xl italic leading-snug text-[#a8342a]">
             {eyebrow}
           </p>
         ) : null}

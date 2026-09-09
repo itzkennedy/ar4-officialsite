@@ -37,8 +37,8 @@ export function SocialLinks({
             target="_blank"
             rel="noopener noreferrer"
             onClick={onNavigate}
-            aria-label={`${social.name}, @reeplaysumtin`}
-            className="inline-flex h-9 w-9 items-center justify-center text-[#9b9b93] transition-colors duration-300 hover:text-[#D65A31]"
+            aria-label={`${social.name}, ${social.handle}`}
+            className="inline-flex h-9 w-9 items-center justify-center text-[#9b9b93] transition-colors duration-300 hover:text-[#a8342a]"
           >
             <Icon className={iconClassName} />
           </a>

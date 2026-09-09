@@ -17,17 +17,17 @@ type FormStatus = "idle" | "error" | "success";
 const contactChannels = [
   {
     label: "Management",
-    email: "management@reeplay.ng",
+    email: "management@ar4.ng",
     note: "Business, partnerships",
   },
   {
     label: "Press",
-    email: "press@reeplay.ng",
+    email: "press@ar4.ng",
     note: "Interviews, features, media",
   },
   {
     label: "Collaborations",
-    email: "collab@reeplay.ng",
+    email: "collab@ar4.ng",
     note: "Features, production, remixes",
   },
 ];
@@ -74,7 +74,7 @@ function FieldLabel({
   return (
     <label htmlFor={htmlFor} className="mb-2 block font-mono text-[0.62rem] uppercase tracking-[0.25em] text-[#9b9b93]">
       {children}
-      {required ? <span className="text-[#D65A31]"> *</span> : null}
+      {required ? <span className="text-[#a8342a]"> *</span> : null}
     </label>
   );
 }
@@ -82,7 +82,7 @@ function FieldLabel({
 function FieldError({ message }: { message?: string }) {
   if (!message) return null;
   return (
-    <p className="mt-1.5 font-mono text-[0.6rem] uppercase tracking-[0.15em] text-[#D65A31]">
+    <p className="mt-1.5 font-mono text-[0.6rem] uppercase tracking-[0.15em] text-[#a8342a]">
       {message}
     </p>
   );
@@ -133,16 +133,16 @@ export default function ContactPage() {
   };
 
   const inputClass =
-    "w-full border border-[#2a2a2a] bg-[#111] px-4 py-3.5 text-sm text-[#F2F0EB] placeholder:text-[#55554e] focus:border-[#D65A31] focus:outline-none";
+    "w-full border border-[#2a2a2a] bg-[#111] px-4 py-3.5 text-sm text-[#F2F0EB] placeholder:text-[#55554e] focus:border-[#a8342a] focus:outline-none";
 
   return (
     <>
       <Navbar />
       <main>
         <PageHeader
-          eyebrow="Book Reeplay"
+          eyebrow="Book AR4"
           title="Contact."
-          description="Bring the energy to your city. Booking enquiries and everything else."
+          description="Bring the music to your city. Booking enquiries and everything else."
         />
 
         <section className="bg-[#080808]">
@@ -150,11 +150,11 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
               <div className="lg:col-span-5">
                 <Reveal>
-                  <p className="font-serif text-xl italic text-[#D65A31]">
-                    Book Reeplay
+                  <p className="font-serif text-xl italic text-[#a8342a]">
+                    Book AR4
                   </p>
                   <h2 className="mt-4 font-display text-[clamp(2.5rem,6vw,4.5rem)] font-normal uppercase leading-[0.9] text-[#F2F0EB]">
-                    Bring the energy.
+                    Bring the music.
                   </h2>
                   <p className="mt-6 max-w-[40ch] text-sm leading-relaxed text-[#8a8a8a]">
                     Concerts, festivals, club appearances, university and corporate events. Tell
@@ -168,7 +168,7 @@ export default function ContactPage() {
                   </p>
                   <a
                     href={`mailto:${siteConfig.email.booking}`}
-                    className="group mt-4 inline-flex items-center gap-3 font-mono text-sm text-[#F2F0EB] transition-colors hover:text-[#D65A31]"
+                    className="group mt-4 inline-flex items-center gap-3 font-mono text-sm text-[#F2F0EB] transition-colors hover:text-[#a8342a]"
                   >
                     {siteConfig.email.booking}
                     <ArrowIcon className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -187,7 +187,7 @@ export default function ContactPage() {
                       <Reveal key={channel.label} delay={i * 0.05}>
                         <a
                           href={`mailto:${channel.email}`}
-                          className="group flex items-baseline justify-between gap-4 border-t border-[#1a1a1a] py-5 transition-colors duration-300 hover:border-[#D65A31]"
+                          className="group flex items-baseline justify-between gap-4 border-t border-[#1a1a1a] py-5 transition-colors duration-300 hover:border-[#a8342a]"
                         >
                           <div>
                             <p className="font-display text-xl font-normal uppercase leading-none text-[#F2F0EB]">
@@ -197,8 +197,8 @@ export default function ContactPage() {
                               {channel.note}
                             </p>
                           </div>
-                          <span className="flex items-center gap-3 font-mono text-[0.58rem] uppercase tracking-[0.15em] text-[#8a8a8a] transition-colors group-hover:text-[#D65A31]">
-                            {channel.email.replace("@reeplay.ng", "")}
+                          <span className="flex items-center gap-3 font-mono text-[0.58rem] uppercase tracking-[0.15em] text-[#8a8a8a] transition-colors group-hover:text-[#a8342a]">
+                            {channel.email.replace("@ar4.ng", "")}
                             <ChevronRightIcon className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                           </span>
                         </a>
@@ -213,7 +213,7 @@ export default function ContactPage() {
                   </p>
                   <SocialLinks className="mt-6 flex items-center gap-5" iconClassName="h-6 w-6" />
                   <p className="mt-6 font-mono text-[0.62rem] uppercase tracking-[0.25em] text-[#6b6b64]">
-                    @reeplaysumtin, all platforms
+                    @ar4oluwa, all platforms
                   </p>
                 </Reveal>
               </div>
@@ -237,7 +237,7 @@ export default function ContactPage() {
                     </div>
                   ) : (
                     <form onSubmit={onSubmit} noValidate>
-                      <p className="font-serif text-lg italic text-[#D65A31]">
+                      <p className="font-serif text-lg italic text-[#a8342a]">
                         About you
                       </p>
                       <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -297,7 +297,7 @@ export default function ContactPage() {
                           </div>
                         </div>
 
-                        <p className="mt-12 font-serif text-lg italic text-[#D65A31]">
+                        <p className="mt-12 font-serif text-lg italic text-[#a8342a]">
                           The event
                         </p>
                         <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -432,7 +432,7 @@ export default function ContactPage() {
                         </div>
 
                         {status === "error" ? (
-                          <p className="mt-6 font-mono text-[0.62rem] uppercase tracking-[0.2em] text-[#D65A31]">
+                          <p className="mt-6 font-mono text-[0.62rem] uppercase tracking-[0.2em] text-[#a8342a]">
                             Check the highlighted fields and try again.
                           </p>
                         ) : null}
