@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
@@ -32,7 +32,7 @@ function GalleryGrid({ onOpen }: { onOpen: (image: GalleryImage) => void }) {
             />
             <span className="absolute inset-0 bg-gradient-to-t from-[#080808]/80 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             <span className="absolute inset-x-0 bottom-0 translate-y-2 p-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-              <span className="block font-serif text-base italic text-[#F2F0EB]">
+              <span className="block font-serif text-base italic text-[#F2F0EA]">
                 {image.caption}
               </span>
             </span>
@@ -125,7 +125,7 @@ export default function GalleryPage() {
                 type="button"
                 ref={closeRef}
                 onClick={close}
-                className="p-2 text-[#F2F0EB] transition-colors hover:text-[#a8342a]"
+                className="p-2 text-[#F2F0EA] transition-colors hover:text-magenta"
                 aria-label="Close"
               >
                 <CloseIcon className="h-7 w-7" />
@@ -153,7 +153,7 @@ export default function GalleryPage() {
                 className="group absolute left-2 z-10 p-3 sm:left-6"
                 aria-label="Previous image"
               >
-                <ChevronRightIcon className="h-8 w-8 rotate-180 text-[#55554e] transition-colors group-hover:text-[#F2F0EB]" />
+                <ChevronRightIcon className="h-8 w-8 rotate-180 text-olive transition-colors group-hover:text-[#F2F0EA]" />
               </button>
 
               <motion.div
@@ -179,12 +179,12 @@ export default function GalleryPage() {
                 className="group absolute right-2 z-10 p-3 sm:right-6"
                 aria-label="Next image"
               >
-                <ChevronRightIcon className="h-8 w-8 text-[#55554e] transition-colors group-hover:text-[#F2F0EB]" />
+                <ChevronRightIcon className="h-8 w-8 text-olive transition-colors group-hover:text-[#F2F0EA]" />
               </button>
             </div>
 
             <div className="p-5 text-center sm:p-8">
-              <p className="font-mono text-[0.6rem] uppercase tracking-[0.25em] text-[#55554e]">
+              <p className="font-mono text-[0.6rem] uppercase tracking-[0.25em] text-olive">
                 {String(galleryImages.findIndex((g) => g.id === active.id) + 1).padStart(2, "0")} /{" "}
                 {String(galleryImages.length).padStart(2, "0")}
               </p>

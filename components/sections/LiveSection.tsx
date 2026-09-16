@@ -1,4 +1,4 @@
-﻿import { getUpcomingEvents, emptyStateCopy } from "@/lib/events";
+import { getUpcomingEvents, emptyStateCopy } from "@/lib/events";
 import { SectionHeader } from "@/components/SectionHeader";
 import { EventRow } from "@/components/EventCard";
 import { Reveal } from "@/components/animations";
@@ -28,7 +28,7 @@ export function LiveSection() {
           ) : (
             <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-end">
               <div className="lg:col-span-8">
-                <p className="font-serif text-xl italic text-[#a8342a]">
+                <p className="font-serif text-xl italic text-magenta">
                   {emptyStateCopy.subheading}
                 </p>
                 <p className="mt-5 max-w-[34ch] font-display text-[clamp(2.5rem,6vw,4.5rem)] font-normal uppercase leading-[0.9] text-[#F2F0EA]">
@@ -36,14 +36,14 @@ export function LiveSection() {
                 </p>
                 <p className="mt-6 max-w-[46ch] text-base leading-relaxed text-[#8a8a8a]">
                   When AR4 steps out, shows and appearances will be listed here. Until then,
-                  the era lives online, and the books are open.
+                  the first chapter lives online, and the books are open.
                 </p>
               </div>
               <div className="lg:col-span-4">
                 <ButtonLink href="/contact" variant="primary" size="lg" showArrow>
                   Book AR4
                 </ButtonLink>
-                <p className="mt-5 border-l border-[#a8342a] pl-5 font-mono text-[0.65rem] uppercase tracking-[0.2em] text-[#6b6861]">
+                <p className="mt-5 border-l border-magenta pl-5 font-mono text-[0.65rem] uppercase tracking-[0.2em] text-[#6b6861]">
                   {siteConfig.emailDisplay}
                 </p>
               </div>

@@ -1,10 +1,10 @@
 export const artistImages = {
   hero: {
-    src: "/images/ar4/hate-me.jpg",
-    alt: "AR4, Hate Me?",
+    src: "/images/ar4/press/press-01.jpg",
+    alt: "AR4",
   },
   about: {
-    src: "/images/ar4/its-not-dat-deep-1.jpg",
+    src: "/images/ar4/press/press-03.jpg",
     alt: "AR4",
   },
 };

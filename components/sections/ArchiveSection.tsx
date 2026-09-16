@@ -22,7 +22,7 @@ export function ArchiveSection() {
           <SectionHeader eyebrow="Archive" title="Visual Record" />
           <Link
             href="/gallery"
-            className="group inline-flex items-center gap-3 font-mono text-[0.68rem] uppercase tracking-[0.25em] text-[#F2F0EA] transition-colors hover:text-[#a8342a]"
+            className="group inline-flex items-center gap-3 font-mono text-[0.68rem] uppercase tracking-[0.25em] text-[#F2F0EA] transition-colors hover:text-magenta"
           >
             View the archive
             <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -47,7 +47,7 @@ export function ArchiveSection() {
                     image.span === "lead" ? "aspect-[4/3] lg:aspect-square" : "aspect-square"
                   }`}
                 />
-                <span className="absolute inset-0 bg-gradient-to-t from-[#08080a]/70 via-transparent to-transparent" />
+                <span className="absolute inset-0 bg-gradient-to-t from-brown/70 via-transparent to-transparent" />
                 <span className="absolute inset-x-0 bottom-0 p-5">
                   <span className="block font-serif text-base italic text-[#F2F0EA]">
                     {image.caption}

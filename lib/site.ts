@@ -1,12 +1,11 @@
 export const siteConfig = {
   name: "AR4",
-  fullName: "Araoluwa Giwa-Osagie",
   handle: "ar4oluwa",
   tagline: "one man soldier",
   description:
-    "Official website of Nigerian songstress AR4 (Araoluwa Giwa-Osagie). Explore the music, the films and the world behind IT'S NOT DAT DEEP.",
-  era: "IT'S NOT DAT DEEP",
-  eraTag: "Current Era",
+    "Official website of Nigerian songstress AR4. Explore the music, the films and the world behind IT'S NOT DAT DEEP.",
+  chapter: "IT'S NOT DAT DEEP",
+  chapterTag: "First Chapter",
   url: "https://ar4.ng",
   email: { booking: "booking@ar4.ng", media: "press@ar4.ng" },
   emailDisplay: "booking@ar4.ng",
@@ -33,7 +32,7 @@ export const siteConfig = {
   ],
   streaming: [
     {
-      name: "Stream the Era",
+      name: "Stream the first chapter",
       handle: "rainlabs.lnk.to/INDD",
       url: "https://rainlabs.lnk.to/INDD",
       primary: true,

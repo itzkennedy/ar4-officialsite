@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -11,19 +11,19 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "AR4 (Araoluwa Giwa-Osagie) is a Nigerian songstress. one man soldier. The story behind the music.",
+    "AR4 is a Nigerian songstress. one man soldier. The story behind the music.",
 };
 
 const chapterData = [
   {
     num: "01",
     title: "The Name",
-    body: "AR4, born Araoluwa Giwa-Osagie, A.R.4, four letters for a voice that carries her own story into song.",
+    body: "AR4, three characters for a voice that carries her own story into song.",
   },
   {
     num: "02",
     title: "The Training",
-    body: "She studied music formally and graduated with top honors in 2018, the discipline behind an effortless-sounding control.",
+    body: "She studied music formally and graduated with top honors in 2022, the discipline behind an effortless-sounding control.",
   },
   {
     num: "03",
@@ -32,19 +32,19 @@ const chapterData = [
   },
   {
     num: "04",
-    title: "The Era",
+    title: "The Chapter",
     body: "IT'S NOT DAT DEEP (2026), built with denzl and released through rain. labs, is where she stands now, a world cut with an unbothered calm.",
   },
 ];
 
 const timelineData = [
-  { year: "2018", text: "Graduates with top honors after formal study in music." },
+  { year: "2022", text: "Graduates with top honors after formal study in music." },
   { year: "2024", text: "Debut single Dedicated, produced by MOFO, arrives." },
   { year: "Dec 2024", text: "NIRV4N4 / J4DED, a two-part study in duality, with FADAH." },
   { year: "Nov 2025", text: "No Be Lie begins to turn heads." },
   { year: "Jan 2026", text: "10 TOES, grounded and quiet, lands with denzl, malik bawa and Lexi." },
-  { year: "May 2026", text: "Pay No Mind, the era's lead single, with denzl, SGaWD and Zamir." },
-  { year: "Aug 2026", text: "IT'S NOT DAT DEEP, the debut album, is released through rain. labs." },
+  { year: "May 2026", text: "Pay No Mind, the first chapter's lead single, with denzl, SGaWD and Zamir." },
+  { year: "Aug 2026", text: "IT'S NOT DAT DEEP, the debut mixtape, is released through rain. labs." },
 ];
 
 export default function AboutPage() {
@@ -56,7 +56,7 @@ export default function AboutPage() {
           eyebrow="The Artist"
           title={
             <>
-              Araoluwa<span className="text-[#a8342a]">.</span>
+              AR4<span className="text-magenta">.</span>
             </>
           }
           description="AR4, one man soldier. A Nigerian songstress whose music turns her own journey into melody."
@@ -68,7 +68,7 @@ export default function AboutPage() {
               <Reveal className="lg:col-span-5" y={40}>
                 <div className="relative aspect-[4/5] overflow-hidden bg-[#111]">
                   <Image
-                    src="/images/ar4/its-not-dat-deep-2.jpg"
+                    src="/images/ar4/press/press-03.jpg"
                     alt="AR4"
                     fill
                     sizes="(min-width: 1024px) 40vw, 100vw"
@@ -86,7 +86,7 @@ export default function AboutPage() {
               <div className="flex flex-col justify-center lg:col-span-7">
                 <Reveal delay={0.1}>
                   <p className="text-xl leading-relaxed text-[#F2F0EA] sm:text-2xl">
-                    Araoluwa Giwa-Osagie, AR4, is a Nigerian songstress who studied the
+                    AR4 is a Nigerian songstress who studied the
                     craft, then built a world of her own.
                   </p>
                 </Reveal>
@@ -118,7 +118,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 gap-x-16 gap-y-12 lg:grid-cols-2">
               {chapterData.map((chapter, i) => (
                 <Reveal key={chapter.num} delay={i * 0.05}>
-                  <p className="font-serif text-xl italic text-[#a8342a]">
+                  <p className="font-serif text-xl italic text-magenta">
                     {chapter.num}
                   </p>
                   <h3 className="mt-3 font-display text-2xl font-normal uppercase text-[#F2F0EA] sm:text-3xl">
@@ -144,7 +144,7 @@ export default function AboutPage() {
               {timelineData.map((item, i) => (
                 <Reveal key={item.year} delay={i * 0.04}>
                   <div className="grid grid-cols-12 items-baseline gap-4 border-t border-[#1a1a1a] py-6">
-                    <span className="col-span-3 font-display text-3xl font-normal tabular-nums text-[#a8342a] sm:col-span-2 sm:text-4xl">
+                    <span className="col-span-3 font-display text-3xl font-normal tabular-nums text-magenta sm:col-span-2 sm:text-4xl">
                       {item.year}
                     </span>
                     <span className="col-span-9 max-w-[58ch] text-sm leading-relaxed text-[#9b9b93] sm:col-span-7 sm:text-base">
@@ -163,13 +163,13 @@ export default function AboutPage() {
             <Reveal>
               <div className="flex flex-wrap items-end justify-between gap-8">
                 <div className="max-w-xl">
-                  <p className="font-serif text-xl italic text-[#a8342a]">Now</p>
+                  <p className="font-serif text-xl italic text-magenta">Now</p>
                   <h2 className="mt-3 font-display text-3xl font-normal uppercase text-[#F2F0EA] sm:text-4xl">
                     IT&apos;S NOT DAT DEEP
                   </h2>
                   <p className="mt-4 max-w-[52ch] text-sm leading-relaxed text-[#9b9b93]">
-                    The debut album, with denzl, through rain. labs, seven tracks cut with
-                    an unbothered calm. Stream the era everywhere.
+                    The debut mixtape, with denzl, through rain. labs, seven tracks cut with
+                    an unbothered calm. Stream the first chapter everywhere.
                   </p>
                 </div>
                 <ButtonLink
@@ -179,7 +179,7 @@ export default function AboutPage() {
                   variant="primary"
                   size="lg"
                 >
-                  Stream the era
+                  Stream the first chapter
                 </ButtonLink>
               </div>
             </Reveal>

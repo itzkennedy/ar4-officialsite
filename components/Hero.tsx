@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -50,7 +50,7 @@ export function Hero() {
           transition={{ duration: 1.1, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="mt-4 font-display text-[clamp(5rem,22vw,16rem)] font-normal uppercase leading-[0.82] text-[#F2F0EA]"
         >
-          AR<span className="text-[#a8342a]">4</span>
+          AR<span className="text-magenta">4</span>
         </motion.h1>
 
         <div className="mt-6 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
@@ -60,8 +60,10 @@ export function Hero() {
             transition={{ duration: 0.9, delay: 0.75, ease: [0.22, 1, 0.36, 1] }}
             className="max-w-[34ch] font-serif text-xl italic leading-snug text-[#d8d4ca] sm:text-2xl"
           >
-            Araoluwa Giwa-Osagie.
-            <span className="block text-[#8f8b82]">The world of {siteConfig.era}.</span>
+            The world of AR4.
+            <span className="block text-[#8f8b82]">
+              {siteConfig.chapter} · {siteConfig.chapterTag}.
+            </span>
           </motion.p>
 
           <motion.a
@@ -71,9 +73,9 @@ export function Hero() {
             href={primaryStream?.url ?? siteConfig.streaming[0].url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-4 border-b border-[#F2F0EA]/30 pb-2 pt-1 font-mono text-[0.7rem] uppercase tracking-[0.28em] text-[#F2F0EA] transition-colors duration-300 hover:border-[#a8342a] hover:text-[#a8342a]"
+            className="group inline-flex items-center gap-4 border-b border-[#F2F0EA]/30 pb-2 pt-1 font-mono text-[0.7rem] uppercase tracking-[0.28em] text-[#F2F0EA] transition-colors duration-300 hover:border-magenta hover:text-magenta"
           >
-            Stream the era
+            Stream the first chapter
             <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </motion.a>
         </div>
@@ -88,7 +90,7 @@ export function Hero() {
         <motion.span
           animate={reduceMotion ? {} : { y: [0, 8, 0] }}
           transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-          className="block h-12 w-px bg-[#a8342a]"
+          className="block h-12 w-px bg-magenta"
         />
         <span className="font-mono text-[0.6rem] uppercase tracking-[0.3em] text-[#6b6861]">
           Scroll
@@ -96,10 +98,10 @@ export function Hero() {
       </motion.div>
 
       <Link
-        href="#era"
+        href="#chapter"
         className="sr-only focus:not-sr-only focus:absolute focus:z-20 focus:top-20 focus:left-4 focus:bg-[#08080a] focus:px-3 focus:py-2"
       >
-        Skip to the current era
+        Skip to the first chapter
       </Link>
     </section>
   );

@@ -29,14 +29,14 @@ export function ReleaseCard({ release, index = 0, large = false }: { release: Re
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/75 via-[#080808]/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
           <div className="absolute inset-x-0 bottom-0 translate-y-1 p-5 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-            <span className="font-serif text-lg italic text-[#F2F0EB]">
+            <span className="font-serif text-lg italic text-[#F2F0EA]">
               View release <span aria-hidden="true">→</span>
             </span>
           </div>
         </div>
         <div className="flex items-baseline justify-between gap-4 pt-4">
           <div>
-            <h3 className={`font-display font-normal uppercase leading-none text-[#F2F0EB] ${large ? "text-2xl" : "text-lg"}`}>
+            <h3 className={`font-display font-normal uppercase leading-none text-[#F2F0EA] ${large ? "text-2xl" : "text-lg"}`}>
               {release.title}
             </h3>
             {release.artist ? (

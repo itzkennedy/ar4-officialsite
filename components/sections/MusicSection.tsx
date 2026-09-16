@@ -25,7 +25,7 @@ export function MusicSection() {
                 href={`/music/${release.slug}`}
                 className="group grid grid-cols-12 items-center gap-4 border-t border-[#202024] py-6 transition-colors duration-300 last:border-b hover:bg-[#111] sm:gap-6"
               >
-                <span className="col-span-1 font-mono text-xs text-[#55554e]">
+                <span className="col-span-1 font-mono text-xs text-olive">
                   {String(releases.length - i).padStart(2, "0")}
                 </span>
                 <span className="col-span-3 sm:col-span-2">

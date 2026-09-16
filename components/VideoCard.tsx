@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
@@ -52,7 +52,7 @@ export function VideoCard({
         </div>
 
         <div className="pt-5">
-          <p className="font-mono text-[0.58rem] uppercase tracking-[0.2em] text-[#a8342a]">
+          <p className="font-mono text-[0.58rem] uppercase tracking-[0.2em] text-olive">
             {video.subtitle}
           </p>
           <h3 className="mt-2 font-display text-2xl font-normal uppercase leading-tight text-[#F2F0EA]">

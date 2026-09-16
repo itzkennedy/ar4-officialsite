@@ -1,4 +1,4 @@
-﻿import { videos, channel, getFeaturedVideo } from "@/lib/videos";
+import { videos, channel, getFeaturedVideo } from "@/lib/videos";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
@@ -37,7 +37,7 @@ export default function VideosPage() {
                 href={channel.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-[#F2F0EA] underline decoration-[#a8342a] decoration-2 underline-offset-4 transition-colors hover:text-[#a8342a]"
+                className="group inline-flex items-center gap-2 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-[#F2F0EA] underline decoration-magenta decoration-2 underline-offset-4 transition-colors hover:text-magenta"
               >
                 Visit the channel
                 <ArrowIcon className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />

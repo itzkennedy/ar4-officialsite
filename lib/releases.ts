@@ -1,4 +1,4 @@
-export type ReleaseType = "Album" | "EP" | "Single";
+export type ReleaseType = "EP" | "Mixtape" | "Single";
 
 export interface ReleaseLink {
   platform: "Spotify" | "Apple Music" | "Audiomack" | "YouTube" | "Deezer";
@@ -27,13 +27,13 @@ export const releases: Release[] = [
     slug: "its-not-dat-deep",
     title: "IT'S NOT DAT DEEP",
     artist: "AR4 & denzl",
-    type: "Album",
+    type: "Mixtape",
     year: 2026,
     month: "Aug",
     trackCount: 7,
     artwork: "/ar4/covers/its-not-dat-deep.jpg",
     description:
-      "The debut album and the declaration of the current era. Seven tracks cut with an unbothered calm, produced alongside denzl and released through rain. labs.",
+      "The debut mixtape and the declaration of the first chapter. Seven tracks cut with an unbothered calm, produced alongside denzl and released through rain. labs.",
     tracks: [
       "HYPNOTIZE",
       "LOVA",
@@ -63,7 +63,7 @@ export const releases: Release[] = [
     trackCount: 1,
     artwork: "/ar4/covers/pay-no-mind.jpg",
     description:
-      "The lead single for the era. A quiet-voiced refusal to be moved, built with denzl and carried by SGaWD and Zamir.",
+      "The lead single for the first chapter. A quiet-voiced refusal to be moved, built with denzl and carried by SGaWD and Zamir.",
     notes: "℗ 2026 rain. labs, under exclusive license from AR4 & denzl.",
     links: [
       {
@@ -91,7 +91,7 @@ export const releases: Release[] = [
     trackCount: 1,
     artwork: "/ar4/covers/no-be-lie.jpg",
     description:
-      "The record that started turning heads before the era fully arrived. Carried into the album, where it lives on as a centrepiece.",
+      "The record that started turning heads before the first chapter fully arrived. Carried into the mixtape, where it lives on as a centrepiece.",
     links: [
       {
         platform: "Audiomack",
@@ -140,7 +140,7 @@ export const releases: Release[] = [
     artwork: "/ar4/covers/dedicated.jpg",
     description:
       "The debut single. A melodious testament to the road travelled and the road ahead, produced by MOFO, and the start of it all.",
-    notes: "Written by Araoluwa Giwa-Osagie. Produced by MOFO.",
+    notes: "Written by AR4. Produced by MOFO.",
     links: [
       { platform: "Audiomack", url: "https://audiomack.com/ar4oluwa" },
     ],
@@ -152,4 +152,3 @@ export const getReleaseBySlug = (slug: string): Release | undefined =>
 
 export const latestRelease = releases.find((r) => r.latest);
 export const featuredReleases = releases.filter((r) => r.featured || r.latest);
-export const albumsOnly = releases.filter((r) => r.type === "Album");

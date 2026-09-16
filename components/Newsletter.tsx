@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { Reveal } from "@/components/animations";
@@ -26,10 +26,10 @@ export function Newsletter() {
         <Reveal>
           <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="font-serif text-xl italic text-[#a8342a]">
+              <p className="font-serif text-xl italic text-magenta">
                 Be the First to Know
               </p>
-              <h2 className="mt-5 max-w-[16ch] font-display text-4xl font-normal uppercase leading-[0.9] text-[#F2F0EB] sm:text-6xl">
+              <h2 className="mt-5 max-w-[16ch] font-display text-4xl font-normal uppercase leading-[0.9] text-[#F2F0EA] sm:text-6xl">
                 New shows, first
               </h2>
               <p className="mt-5 max-w-[40ch] text-sm leading-relaxed text-[#8a8a8a]">
@@ -40,7 +40,7 @@ export function Newsletter() {
             <div className="w-full max-w-xl">
               {status === "success" ? (
                 <div className="px-6 py-8 text-center">
-                  <p className="font-display text-3xl font-normal uppercase text-[#F2F0EB]">
+                  <p className="font-display text-3xl font-normal uppercase text-[#F2F0EA]">
                     You&apos;re in.
                   </p>
                   <p className="mt-3 font-serif text-lg italic text-[#8a8a8a]">
@@ -62,7 +62,7 @@ export function Newsletter() {
                         if (status === "error") setStatus("idle");
                       }}
                       placeholder="Your email"
-                      className="w-full border border-[#2a2a2a] bg-[#111] px-5 py-4 text-sm text-[#F2F0EB] placeholder:text-[#55554e] focus:border-[#a8342a] focus:outline-none"
+                      className="w-full border border-[#2a2a2a] bg-[#111] px-5 py-4 text-sm text-[#F2F0EA] placeholder:text-[#55554e] focus:border-magenta focus:outline-none"
                     />
                     <Button type="submit" variant="primary" size="lg" className="w-full sm:w-auto">
                       Subscribe
@@ -70,7 +70,7 @@ export function Newsletter() {
                     </Button>
                   </div>
                   {status === "error" ? (
-                    <p className="mt-3 font-mono text-[0.62rem] uppercase tracking-[0.2em] text-[#a8342a]">
+                    <p className="mt-3 font-mono text-[0.62rem] uppercase tracking-[0.2em] text-magenta">
                       Enter a valid email address.
                     </p>
                   ) : (

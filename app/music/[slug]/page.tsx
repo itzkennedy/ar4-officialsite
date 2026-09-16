@@ -76,7 +76,7 @@ export default async function ReleasePage({ params }: PageProps) {
 
               <div className="flex flex-col justify-center lg:col-span-7">
                 <Reveal delay={0.1}>
-                  <p className="font-serif text-lg italic text-[#a8342a]">
+                  <p className="font-serif text-lg italic text-magenta">
                     {release.type} · {release.month} {release.year}
                   </p>
                   <h1 className="mt-4 font-display text-4xl font-normal uppercase leading-[0.9] text-[#F2F0EA] sm:text-7xl">
@@ -143,7 +143,7 @@ export default async function ReleasePage({ params }: PageProps) {
                     key={`${track}-${i}`}
                     className="flex items-baseline gap-6 border-b border-[#1a1a1a] py-5"
                   >
-                    <span className="font-mono text-xs tabular-nums text-[#55554e]">
+                    <span className="font-mono text-xs tabular-nums text-olive">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span className="font-display text-lg font-normal uppercase text-[#F2F0EA] sm:text-2xl">

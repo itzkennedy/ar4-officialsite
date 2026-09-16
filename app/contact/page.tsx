@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
@@ -74,7 +74,7 @@ function FieldLabel({
   return (
     <label htmlFor={htmlFor} className="mb-2 block font-mono text-[0.62rem] uppercase tracking-[0.25em] text-[#9b9b93]">
       {children}
-      {required ? <span className="text-[#a8342a]"> *</span> : null}
+      {required ? <span className="text-magenta"> *</span> : null}
     </label>
   );
 }
@@ -82,7 +82,7 @@ function FieldLabel({
 function FieldError({ message }: { message?: string }) {
   if (!message) return null;
   return (
-    <p className="mt-1.5 font-mono text-[0.6rem] uppercase tracking-[0.15em] text-[#a8342a]">
+    <p className="mt-1.5 font-mono text-[0.6rem] uppercase tracking-[0.15em] text-magenta">
       {message}
     </p>
   );
@@ -133,7 +133,7 @@ export default function ContactPage() {
   };
 
   const inputClass =
-    "w-full border border-[#2a2a2a] bg-[#111] px-4 py-3.5 text-sm text-[#F2F0EB] placeholder:text-[#55554e] focus:border-[#a8342a] focus:outline-none";
+    "w-full border border-[#2a2a2a] bg-[#111] px-4 py-3.5 text-sm text-[#F2F0EA] placeholder:text-[#55554e] focus:border-magenta focus:outline-none";
 
   return (
     <>
@@ -150,10 +150,10 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
               <div className="lg:col-span-5">
                 <Reveal>
-                  <p className="font-serif text-xl italic text-[#a8342a]">
+                  <p className="font-serif text-xl italic text-magenta">
                     Book AR4
                   </p>
-                  <h2 className="mt-4 font-display text-[clamp(2.5rem,6vw,4.5rem)] font-normal uppercase leading-[0.9] text-[#F2F0EB]">
+                  <h2 className="mt-4 font-display text-[clamp(2.5rem,6vw,4.5rem)] font-normal uppercase leading-[0.9] text-[#F2F0EA]">
                     Bring the music.
                   </h2>
                   <p className="mt-6 max-w-[40ch] text-sm leading-relaxed text-[#8a8a8a]">
@@ -168,7 +168,7 @@ export default function ContactPage() {
                   </p>
                   <a
                     href={`mailto:${siteConfig.email.booking}`}
-                    className="group mt-4 inline-flex items-center gap-3 font-mono text-sm text-[#F2F0EB] transition-colors hover:text-[#a8342a]"
+                    className="group mt-4 inline-flex items-center gap-3 font-mono text-sm text-[#F2F0EA] transition-colors hover:text-magenta"
                   >
                     {siteConfig.email.booking}
                     <ArrowIcon className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -187,17 +187,17 @@ export default function ContactPage() {
                       <Reveal key={channel.label} delay={i * 0.05}>
                         <a
                           href={`mailto:${channel.email}`}
-                          className="group flex items-baseline justify-between gap-4 border-t border-[#1a1a1a] py-5 transition-colors duration-300 hover:border-[#a8342a]"
+                          className="group flex items-baseline justify-between gap-4 border-t border-[#1a1a1a] py-5 transition-colors duration-300 hover:border-magenta"
                         >
                           <div>
-                            <p className="font-display text-xl font-normal uppercase leading-none text-[#F2F0EB]">
+                            <p className="font-display text-xl font-normal uppercase leading-none text-[#F2F0EA]">
                               {channel.label}
                             </p>
                             <p className="mt-1.5 font-mono text-[0.6rem] uppercase tracking-[0.18em] text-[#6b6b64]">
                               {channel.note}
                             </p>
                           </div>
-                          <span className="flex items-center gap-3 font-mono text-[0.58rem] uppercase tracking-[0.15em] text-[#8a8a8a] transition-colors group-hover:text-[#a8342a]">
+                          <span className="flex items-center gap-3 font-mono text-[0.58rem] uppercase tracking-[0.15em] text-[#8a8a8a] transition-colors group-hover:text-magenta">
                             {channel.email.replace("@ar4.ng", "")}
                             <ChevronRightIcon className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                           </span>
@@ -222,7 +222,7 @@ export default function ContactPage() {
                 <Reveal delay={0.1}>
                   {status === "success" ? (
                     <div className="flex min-h-[560px] flex-col items-center justify-center px-8 text-center">
-                      <p className="font-display text-3xl font-normal uppercase leading-none text-[#F2F0EB] sm:text-5xl">
+                      <p className="font-display text-3xl font-normal uppercase leading-none text-[#F2F0EA] sm:text-5xl">
                         Enquiry received.
                       </p>
                       <p className="mt-6 max-w-[36ch] font-serif text-lg italic leading-relaxed text-[#8a8a8a]">
@@ -237,7 +237,7 @@ export default function ContactPage() {
                     </div>
                   ) : (
                     <form onSubmit={onSubmit} noValidate>
-                      <p className="font-serif text-lg italic text-[#a8342a]">
+                      <p className="font-serif text-lg italic text-magenta">
                         About you
                       </p>
                       <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -297,7 +297,7 @@ export default function ContactPage() {
                           </div>
                         </div>
 
-                        <p className="mt-12 font-serif text-lg italic text-[#a8342a]">
+                        <p className="mt-12 font-serif text-lg italic text-magenta">
                           The event
                         </p>
                         <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -432,7 +432,7 @@ export default function ContactPage() {
                         </div>
 
                         {status === "error" ? (
-                          <p className="mt-6 font-mono text-[0.62rem] uppercase tracking-[0.2em] text-[#a8342a]">
+                          <p className="mt-6 font-mono text-[0.62rem] uppercase tracking-[0.2em] text-magenta">
                             Check the highlighted fields and try again.
                           </p>
                         ) : null}

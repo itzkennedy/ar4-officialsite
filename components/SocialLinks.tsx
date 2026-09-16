@@ -1,4 +1,4 @@
-﻿import type { SVGProps } from "react";
+import type { SVGProps } from "react";
 import { siteConfig } from "@/lib/site";
 import {
   FacebookIcon,
@@ -38,7 +38,7 @@ export function SocialLinks({
             rel="noopener noreferrer"
             onClick={onNavigate}
             aria-label={`${social.name}, ${social.handle}`}
-            className="inline-flex h-9 w-9 items-center justify-center text-[#9b9b93] transition-colors duration-300 hover:text-[#a8342a]"
+            className="inline-flex h-9 w-9 items-center justify-center text-[#9b9b93] transition-colors duration-300 hover:text-magenta"
           >
             <Icon className={iconClassName} />
           </a>

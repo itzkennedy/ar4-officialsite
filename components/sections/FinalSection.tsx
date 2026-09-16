@@ -15,7 +15,7 @@ export function FinalSection() {
 
         <Reveal delay={0.1}>
           <div className="mt-8 font-display text-[clamp(5rem,24vw,20rem)] font-normal uppercase leading-none text-[#F2F0EA]">
-            AR<span className="text-[#a8342a]">4</span>
+            AR<span className="text-magenta">4</span>
           </div>
         </Reveal>
 
@@ -24,7 +24,7 @@ export function FinalSection() {
             href={streamUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group mt-10 inline-flex items-center gap-4 border-b border-[#F2F0EA]/30 pb-2 pt-1 font-mono text-[0.7rem] uppercase tracking-[0.28em] text-[#F2F0EA] transition-colors duration-300 hover:border-[#a8342a] hover:text-[#a8342a]"
+            className="group mt-10 inline-flex items-center gap-4 border-b border-[#F2F0EA]/30 pb-2 pt-1 font-mono text-[0.7rem] uppercase tracking-[0.28em] text-[#F2F0EA] transition-colors duration-300 hover:border-magenta hover:text-magenta"
           >
             Listen everywhere
             <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>

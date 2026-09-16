@@ -1,4 +1,4 @@
-﻿export function MarqueeStrip({
+export function MarqueeStrip({
   phrases = ["AR4", "IT'S NOT DAT DEEP", "one man soldier", "NEW MUSIC", "NEED YA", "PAY NO MIND"],
 }: {
   phrases?: string[];
@@ -6,16 +6,16 @@
   const item = (key: string, text: string) => (
     <span
       key={key}
-      className="flex items-center font-display text-3xl font-normal uppercase text-[#1f1f1f]"
+      className="flex items-center font-display text-3xl font-normal uppercase text-[#F2F0EA]"
     >
       {text}
-      <span className="mx-8 text-[#a8342a]">✦</span>
+      <span className="mx-8 text-olive">✦</span>
     </span>
   );
 
   return (
     <div
-      className="hidden overflow-hidden border-y border-[#1a1a1a] bg-[#0c0c0c] py-5 md:block"
+      className="hidden overflow-hidden border-y border-black/40 bg-brown py-5 md:block"
       aria-hidden="true"
     >
       <div className="flex whitespace-nowrap">

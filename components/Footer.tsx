@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 import { SocialLinks } from "@/components/SocialLinks";
 
@@ -9,10 +9,10 @@ export function Footer() {
         <div className="flex flex-col gap-12 md:flex-row md:items-start md:justify-between">
           <div>
             <p className="font-display text-6xl font-normal uppercase leading-none text-[#F2F0EA]">
-              AR<span className="text-[#a8342a]">4</span>
+              AR<span className="text-magenta">4</span>
             </p>
             <p className="mt-4 max-w-[280px] font-serif text-lg italic leading-relaxed text-[#6b6861]">
-              one man soldier. Araoluwa Giwa-Osagie.
+              one man soldier.
             </p>
           </div>
 
@@ -47,7 +47,7 @@ export function Footer() {
                     rel="noopener noreferrer"
                     className="group inline-flex items-center gap-2 text-[0.62rem] font-medium uppercase tracking-[0.2em] text-[#55554e] transition-colors hover:text-[#F2F0EA]"
                   >
-                    <span aria-hidden="true" className="font-display text-[0.8rem] text-[#a8342a] transition-transform duration-300 group-hover:translate-x-0.5">
+                    <span aria-hidden="true" className="font-display text-[0.8rem] text-magenta transition-transform duration-300 group-hover:translate-x-0.5">
                       ↗
                     </span>
                     {platform.name}
@@ -58,7 +58,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-4 border-t border-[#1a1a1a] pt-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 flex flex-col gap-4 border-t border-brown pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="font-mono text-[0.6rem] uppercase tracking-[0.25em] text-[#55554e]">
             © 2026{" "}
             <a

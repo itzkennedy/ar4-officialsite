@@ -1,4 +1,4 @@
-﻿import { Reveal } from "@/components/animations";
+import { Reveal } from "@/components/animations";
 import type { ReactNode } from "react";
 
 interface SectionHeaderProps {
@@ -25,12 +25,12 @@ export function SectionHeader({
         className={layout === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}
       >
         {eyebrow ? (
-          <p className="font-serif text-xl italic leading-snug text-[#a8342a]">
+          <p className="font-serif text-xl italic leading-snug text-magenta">
             {eyebrow}
           </p>
         ) : null}
         <h2
-          className={`mt-3 font-display text-[clamp(2.5rem,5vw,4.25rem)] font-normal leading-[0.92] tracking-[0.01em] text-[#F2F0EB] ${titleClassName}`}
+          className={`mt-3 font-display text-[clamp(2.5rem,5vw,4.25rem)] font-normal leading-[0.92] tracking-[0.01em] text-[#F2F0EA] ${titleClassName}`}
         >
           {title}
         </h2>

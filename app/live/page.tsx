@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { getUpcomingEvents, emptyStateCopy } from "@/lib/events";
 import { siteConfig } from "@/lib/site";
 import { Navbar } from "@/components/Navbar";
@@ -32,7 +32,7 @@ export default function LivePage() {
           <div className="mx-auto max-w-[1480px] px-5 py-16 sm:px-8 md:py-24">
             <Reveal>
               <div className="flex items-baseline justify-between border-b border-[#1a1a1a] pb-5">
-                <span className="font-serif text-lg italic text-[#a8342a]">
+                <span className="font-serif text-lg italic text-magenta">
                   Upcoming Shows
                 </span>
               </div>
@@ -48,10 +48,10 @@ export default function LivePage() {
               <Reveal>
                 <div className="grid grid-cols-1 gap-10 py-16 sm:py-20 lg:grid-cols-12">
                   <div className="lg:col-span-8">
-                    <p className="font-serif text-xl italic text-[#a8342a]">
+                    <p className="font-serif text-xl italic text-magenta">
                       {emptyStateCopy.subheading}
                     </p>
-                    <h2 className="mt-4 font-display text-[clamp(2.75rem,7vw,5.5rem)] font-normal uppercase leading-[0.9] text-[#F2F0EB]">
+                    <h2 className="mt-4 font-display text-[clamp(2.75rem,7vw,5.5rem)] font-normal uppercase leading-[0.9] text-[#F2F0EA]">
                       {emptyStateCopy.heading}
                     </h2>
                     <p className="mt-7 max-w-[52ch] text-base leading-relaxed text-[#8a8a8a]">
@@ -70,7 +70,7 @@ export default function LivePage() {
                       </p>
                       <a
                         href={`mailto:${siteConfig.email.booking}`}
-                        className="mt-3 block font-mono text-sm text-[#F2F0EB] transition-colors hover:text-[#a8342a]"
+                        className="mt-3 block font-mono text-sm text-[#F2F0EA] transition-colors hover:text-magenta"
                       >
                         {siteConfig.email.booking}
                       </a>
@@ -82,7 +82,7 @@ export default function LivePage() {
 
             <Reveal delay={0.2} className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-3">
               <div>
-                <p className="font-display text-2xl font-normal uppercase text-[#F2F0EB]">
+                <p className="font-display text-2xl font-normal uppercase text-[#F2F0EA]">
                   Book AR4
                 </p>
                 <p className="mt-2 font-serif text-base italic text-[#8a8a8a]">
@@ -95,7 +95,7 @@ export default function LivePage() {
                 </div>
               </div>
               <div>
-                <p className="font-display text-2xl font-normal uppercase text-[#F2F0EB]">
+                <p className="font-display text-2xl font-normal uppercase text-[#F2F0EA]">
                   Watch Live
                 </p>
                 <p className="mt-2 font-serif text-base italic text-[#8a8a8a]">
@@ -108,7 +108,7 @@ export default function LivePage() {
                 </div>
               </div>
               <div>
-                <p className="font-display text-2xl font-normal uppercase text-[#F2F0EB]">
+                <p className="font-display text-2xl font-normal uppercase text-[#F2F0EA]">
                   Stay Notified
                 </p>
                 <p className="mt-2 font-serif text-base italic text-[#8a8a8a]">
@@ -117,7 +117,7 @@ export default function LivePage() {
                 <div className="mt-5">
                   <a
                     href="#newsletter"
-                    className="group inline-flex items-center gap-3 font-mono text-[0.68rem] font-medium uppercase tracking-[0.18em] text-[#F2F0EB] transition-colors hover:text-[#a8342a]"
+                    className="group inline-flex items-center gap-3 font-mono text-[0.68rem] font-medium uppercase tracking-[0.18em] text-[#F2F0EA] transition-colors hover:text-magenta"
                   >
                     Join the newsletter
                     <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">

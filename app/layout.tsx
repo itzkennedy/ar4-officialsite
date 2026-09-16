@@ -41,14 +41,13 @@ const metadataBase = new URL("https://ar4.ng");
 export const metadata: Metadata = {
   metadataBase,
   title: {
-    default: "AR4 | Araoluwa Giwa-Osagie",
+    default: "AR4",
     template: "%s | AR4",
   },
   description:
-    "Official website of Nigerian songstress AR4 (Araoluwa Giwa-Osagie). Music, film and the world behind IT'S NOT DAT DEEP. one man soldier.",
+    "Official website of Nigerian songstress AR4. Music, film and the world behind IT'S NOT DAT DEEP. one man soldier.",
   keywords: [
     "AR4",
-    "Araoluwa Giwa-Osagie",
     "Nigerian songstress",
     "IT'S NOT DAT DEEP",
     "denzl",
@@ -56,7 +55,7 @@ export const metadata: Metadata = {
     "ar4oluwa",
   ],
   openGraph: {
-    title: "AR4 | Araoluwa Giwa-Osagie",
+    title: "AR4",
     description:
       "one man soldier. The official digital home of Nigerian songstress AR4 and the world of IT'S NOT DAT DEEP.",
     url: "https://ar4.ng",
@@ -65,19 +64,19 @@ export const metadata: Metadata = {
     locale: "en_NG",
     images: [
       {
-        url: "/images/ar4/hate-me.jpg",
-        width: 1440,
-        height: 1919,
+        url: "/images/ar4/press/press-01.jpg",
+        width: 3072,
+        height: 4608,
         alt: "AR4",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AR4 | Araoluwa Giwa-Osagie",
+    title: "AR4",
     description:
       "one man soldier. The official digital home of Nigerian songstress AR4 and the world of IT'S NOT DAT DEEP.",
-    images: ["/images/ar4/hate-me.jpg"],
+    images: ["/images/ar4/press/press-01.jpg"],
   },
   robots: {
     index: true,
@@ -86,7 +85,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#08080a",
+  themeColor: "#000000",
   width: "device-width",
   initialScale: 1,
 };
@@ -109,9 +108,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "MusicGroup",
               name: "AR4",
-              alternateName: "Araoluwa Giwa-Osagie",
               description:
-                "Nigerian songstress and songwriter. Araoluwa Giwa-Osagie, known as AR4.",
+                "Nigerian songstress and songwriter, performing as AR4.",
               url: "https://ar4.ng",
               genre: ["Soul", "Afrobeats", "Alternative"],
               nationalLocation: { "@type": "Country", name: "Nigeria" },

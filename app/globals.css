@@ -11,8 +11,13 @@
   --color-ash: #8f8b82;
   --color-smoke: #6b6861;
   --color-mist: #3a3a40;
-  --color-blood: #a8342a;
-  --color-rust: #6e2a22;
+
+  /* Official AR4 brand palette */
+  --color-magenta: #9b0047;
+  --color-olive: #556b2f;
+  --color-brown: #4f2c1d;
+  --color-black: #000000;
+  --color-white: #ffffff;
 
   --font-display: var(--font-display-family), Impact, ui-sans-serif, sans-serif;
   --font-body: var(--font-body-family), ui-sans-serif, system-ui, sans-serif;
@@ -33,7 +38,7 @@
   color-scheme: dark;
   --bg: var(--color-ink);
   --fg: var(--color-bone);
-  --accent: var(--color-blood);
+  --accent: var(--color-magenta);
 }
 
 html {
@@ -41,8 +46,8 @@ html {
 }
 
 body {
-  background-color: #08080a;
-  color: #f2f0ea;
+  background-color: var(--color-ink);
+  color: var(--color-bone);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -63,13 +68,13 @@ select:focus-visible,
 textarea:focus-visible,
 summary:focus-visible,
 [tabindex]:focus-visible {
-  outline: 1px solid #a8342a;
+  outline: 1px solid var(--color-magenta);
   outline-offset: 3px;
 }
 
 ::selection {
-  background-color: #a8342a;
-  color: #08080a;
+  background-color: var(--color-magenta);
+  color: var(--color-ink);
 }
 
 /* Custom scrollbar */
@@ -84,7 +89,7 @@ summary:focus-visible,
   border-radius: 0;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #a8342a;
+  background: var(--color-magenta);
 }
 
 /* Utility classes */

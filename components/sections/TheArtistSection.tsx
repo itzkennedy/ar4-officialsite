@@ -5,23 +5,23 @@ import { ButtonLink } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/site";
 
 const facts = [
-  { num: "01", label: "The name", text: "AR4, born Araoluwa Giwa-Osagie, a Nigerian songstress whose music turns her own journey into melody." },
-  { num: "02", label: "The training", text: "Formally studied music and graduated with top honors in 2018, before stepping out on her own terms." },
+  { num: "01", label: "The name", text: "AR4, a Nigerian songstress whose music turns her own journey into melody." },
+  { num: "02", label: "The training", text: "Formally studied music and graduated with top honors in 2022, before stepping out on her own terms." },
   { num: "03", label: "The debut", text: "Dedicated (2024), produced by MOFO, opened the catalogue, a melodious testament to the road ahead." },
-  { num: "04", label: "The era", text: "IT'S NOT DAT DEEP (2026) with denzl, released through rain. labs, the record that defines where she stands now." },
+  { num: "04", label: "The chapter", text: "IT'S NOT DAT DEEP (2026) with denzl, released through rain. labs, the record that defines where she stands now." },
 ];
 
 export function TheArtistSection() {
   return (
     <section className="border-t border-[#1a1a1a] bg-[#0c0c0c]">
       <div className="mx-auto max-w-[1480px] px-5 py-24 sm:px-8 md:py-32">
-        <SectionHeader eyebrow="The Artist" title="Araoluwa" />
+        <SectionHeader title="The Artist" />
 
         <div className="mt-14 grid grid-cols-1 gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-7" y={40}>
             <div className="relative aspect-[4/5] max-w-lg overflow-hidden bg-[#111]">
               <Image
-                src="/images/ar4/its-not-dat-deep-1.jpg"
+                src="/images/ar4/press/press-02.jpg"
                 alt="AR4"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -45,11 +45,11 @@ export function TheArtistSection() {
               </p>
             </Reveal>
 
-            <div className="mt-12 border-t border-[#202024]">
+            <div className="mt-12 border-t border-brown">
               {facts.map((f, i) => (
                 <Reveal key={f.num} delay={i * 0.06}>
-                  <div className="grid grid-cols-12 items-baseline gap-4 border-b border-[#202024] py-5">
-                    <span className="col-span-2 font-mono text-xs text-[#a8342a]">
+                  <div className="grid grid-cols-12 items-baseline gap-4 border-b border-brown py-5">
+                    <span className="col-span-2 font-mono text-xs text-magenta">
                       {f.num}
                     </span>
                     <span className="col-span-10">

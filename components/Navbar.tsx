@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -12,7 +12,7 @@ import { CloseIcon, MenuIcon } from "@/components/icons";
 function Brand({ className = "" }: { className?: string }) {
   return (
     <span className={`font-display text-2xl font-normal uppercase text-[#F2F0EA] ${className}`}>
-      AR<span className="text-[#a8342a]">4</span>
+      AR<span className="text-magenta">4</span>
     </span>
   );
 }
@@ -68,7 +68,7 @@ export function Navbar() {
             aria-label="AR4 Home"
           >
             <Brand />
-            <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#a8342a] transition-all duration-300 group-hover:w-full" />
+            <span className="absolute -bottom-1 left-0 h-px w-0 bg-magenta transition-all duration-300 group-hover:w-full" />
           </Link>
 
           <nav className="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
@@ -84,7 +84,7 @@ export function Navbar() {
                 >
                   {item.label}
                   <span
-                    className={`absolute -bottom-2 left-0 h-px bg-[#a8342a] transition-all duration-300 ${
+                    className={`absolute -bottom-2 left-0 h-px bg-magenta transition-all duration-300 ${
                       active ? "w-full" : "w-0"
                     }`}
                   />
@@ -170,18 +170,18 @@ export function Navbar() {
                         href={item.href}
                         onClick={closeMenu}
                         className={`group flex items-baseline justify-between py-3 font-display text-2xl font-normal uppercase transition-colors duration-300 sm:py-4 sm:text-3xl ${
-                          active ? "text-[#a8342a]" : "text-[#F2F0EA] hover:text-[#a8342a]"
+                          active ? "text-magenta" : "text-[#F2F0EA] hover:text-magenta"
                         }`}
                       >
                         <span className="flex items-baseline gap-4">
-                          <span className="font-mono text-xs font-normal text-[#55554e]">
+                          <span className="font-mono text-xs font-normal text-olive">
                             0{i + 1}
                           </span>
                           {item.label}
                         </span>
                         <span
                           aria-hidden="true"
-                          className="text-[#55554e] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#a8342a]"
+                          className="text-[#55554e] transition-all duration-300 group-hover:translate-x-1 group-hover:text-magenta"
                         >
                           →
                         </span>
@@ -214,7 +214,7 @@ export function Navbar() {
                     onNavigate={closeMenu}
                     iconClassName="h-6 w-6"
                   />
-                  <span className="ml-auto font-mono text-[0.55rem] uppercase tracking-[0.2em] text-[#55554e]">
+                  <span className="ml-auto font-mono text-[0.55rem] uppercase tracking-[0.2em] text-olive">
                     @ar4oluwa
                   </span>
                 </div>

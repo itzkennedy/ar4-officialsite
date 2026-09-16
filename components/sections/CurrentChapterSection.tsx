@@ -4,18 +4,18 @@ import { siteConfig } from "@/lib/site";
 import { Reveal } from "@/components/animations";
 import { ButtonLink } from "@/components/ui/Button";
 
-export function CurrentEraSection() {
+export function CurrentChapterSection() {
   const release = latestRelease;
   if (!release) return null;
 
   const streamUrl = siteConfig.streaming.find((s) => s.primary)?.url ?? siteConfig.streaming[0].url;
 
   return (
-    <section id="era" className="border-t border-[#1a1a1a] bg-[#08080a]">
+    <section id="chapter" className="border-t border-[#1a1a1a] bg-[#08080a]">
       <div className="mx-auto max-w-[1480px] px-5 py-24 sm:px-8 md:py-36">
         <Reveal>
-          <p className="font-mono text-[0.65rem] uppercase tracking-[0.35em] text-[#a8342a]">
-            {siteConfig.eraTag}
+          <p className="font-mono text-[0.65rem] uppercase tracking-[0.35em] text-magenta">
+            {siteConfig.chapterTag}
           </p>
         </Reveal>
 
@@ -44,7 +44,7 @@ export function CurrentEraSection() {
 
             <Reveal delay={0.12}>
               <p className="mt-7 max-w-[50ch] text-base leading-relaxed text-[#9b9b93]">
-                The debut album and the current era, seven tracks cut with an unbothered calm.
+                The debut mixtape and the first chapter, seven tracks cut with an unbothered calm.
                 {release.artist ? ` Built with ${release.artist.replace("AR4 & ", "")},` : " "}
                 {" released through rain. labs in August 2026."}
               </p>
@@ -57,7 +57,7 @@ export function CurrentEraSection() {
                     key={track}
                     className="flex items-baseline gap-6 border-t border-[#202024] py-3 last:border-b"
                   >
-                    <span className="font-mono text-xs tabular-nums text-[#55554e]">
+                    <span className="font-mono text-xs tabular-nums text-olive">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span className="font-display text-lg font-normal uppercase tracking-[0.02em] text-[#F2F0EA]">
@@ -76,7 +76,7 @@ export function CurrentEraSection() {
                 variant="primary"
                 size="lg"
               >
-                Stream the album
+                Stream the first chapter
               </ButtonLink>
               <ButtonLink href={`/music/${release.slug}`} variant="ghost" size="lg" showArrow>
                 Explore the release

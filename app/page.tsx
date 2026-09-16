@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { MarqueeStrip } from "@/components/MarqueeStrip";
-import { CurrentEraSection } from "@/components/sections/CurrentEraSection";
+import { CurrentChapterSection } from "@/components/sections/CurrentChapterSection";
 import { MusicSection } from "@/components/sections/MusicSection";
 import { VideosSection } from "@/components/sections/VideosSection";
 import { TheArtistSection } from "@/components/sections/TheArtistSection";
@@ -19,7 +19,7 @@ export default function HomePage() {
       <main>
         <Hero />
         <MarqueeStrip />
-        <CurrentEraSection />
+        <CurrentChapterSection />
         <MusicSection />
         <VideosSection />
         <TheArtistSection />

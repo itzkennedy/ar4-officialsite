@@ -13,7 +13,7 @@ import { StaggerGroup, StaggerItem, Reveal } from "@/components/animations";
 export const metadata: Metadata = {
   title: "Music",
   description:
-    "The music of AR4: Dedicated, NIRV4N4 / J4DED, No Be Lie, 10 TOES, Pay No Mind and the album IT'S NOT DAT DEEP.",
+    "The music of AR4: Dedicated, NIRV4N4 / J4DED, No Be Lie, 10 TOES, Pay No Mind and the mixtape IT'S NOT DAT DEEP.",
 };
 
 export default function MusicPage() {
